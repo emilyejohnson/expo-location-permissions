@@ -41,6 +41,7 @@ export default function MapScreen() {
             <MapView
               ref={mapRef}
               style={styles.map}
+              mapType="satellite" // Set mapType to 'satellite' for satellite view
               initialRegion={{
                 latitude: location.coords.latitude,
                 longitude: location.coords.longitude,
