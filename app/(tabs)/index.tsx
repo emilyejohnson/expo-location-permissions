@@ -44,8 +44,8 @@ export default function MapScreen() {
               initialRegion={{
                 latitude: location.coords.latitude,
                 longitude: location.coords.longitude,
-                //latitudeDelta: 0.0922,
-                //longitudeDelta: 0.0421,
+                latitudeDelta: 0.0922,
+                longitudeDelta: 0.0421,
               }}
               showsUserLocation={true} // Shows the blue dot for user's location
             >
@@ -61,7 +61,7 @@ export default function MapScreen() {
             <Text>{errorMsg || 'Waiting for location...'}</Text>
           )}
           <View style={styles.buttonContainer}>
-            <Button title="Center on My Location" onPress={goToMyLocation} />
+            <Button title="FriendZone Button" onPress={goToMyLocation} />
           </View>
         </View>
       );
@@ -79,7 +79,6 @@ export default function MapScreen() {
       },
       buttonContainer: {
         position: 'absolute',
-        bottom: 20,
         backgroundColor: 'white',
         padding: 10,
         borderRadius: 5,
