@@ -50,13 +50,16 @@ export default function MapScreen() {
               }}
               showsUserLocation={true} // Shows the blue dot for user's location
             >
+              {/* This marker, a self closing tag, is the red marker/pin. Not necessary to have. We may want to change it to be the user profile picture? */}
               <Marker
                 coordinate={{
                   latitude: location.coords.latitude,
                   longitude: location.coords.longitude,
                 }}
-                title="You are here"
+                title="Users Profile Picture"
               />
+
+
             </MapView>
           ) : (
             <Text>{errorMsg || 'Waiting for location...'}</Text>
